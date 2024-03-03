@@ -31,6 +31,15 @@ function main(){
 
 function duracao_do_jogo(horas_inicio, minutos_inicio, horas_termino, minutos_termino){
 
+    if (horas_inicio > horas_termino){
+
+        const horas_dia_seguinte = (Math.abs(horas_inicio - 24) + horas_termino) 
+
+        const minuto_total_o = Math.abs(minutos_termino - minutos_inicio) 
+
+        return (`A duração do jogo foi de ${horas_dia_seguinte} horas e ${minuto_total_o} minutos`)
+    }
+    
     const hora_total = Math.abs(horas_termino - horas_inicio)
 
     const minuto_total = Math.abs(minutos_termino - minutos_inicio) 
@@ -41,4 +50,6 @@ function duracao_do_jogo(horas_inicio, minutos_inicio, horas_termino, minutos_te
 }
 
 main()
+
+
 
